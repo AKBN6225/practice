@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px;">
+    <a href="" class="navbar-brand" style="margin-left: 42%;">Angular Contact App</a>
+</nav>
+
+<div class="container mt-3" style="margin-bottom: 20px;">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-danger">Contact App</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quidem ipsa nobis iusto eius reprehenderit sed numquam vitae, natus veniam pariatur saepe beatae corrupti voluptatum nisi fuga eum rerum aliquid!</p>
+        </div>
+    </div>
+</div>
+<!-- <pre>{{selectedContact | json}}</pre> -->
+
+<div class="container mt-3" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-md-8">
+            <app-contactlist (sendContact)="selectedContact=$event"></app-contactlist>
+        </div>
+        <div class="col-md-4">
+            <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
+        </div>
+    </div>
+</div>

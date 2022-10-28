@@ -1,0 +1,44 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px; margin-bottom: 20px;">
+    <a href="" class="navbar-brand" style="margin-left: 42%;">Angular with pipes</a>
+</nav>
+
+<section class="mt-3" style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <p class="h3">Iterating the json from TS</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                slNo: {{emplyees.slNo}}
+                            </li>
+                            <li class="list-group-item">
+                                Name: {{emplyees.name | uppercase}}
+                            </li>
+                            <li class="list-group-item">
+                                Designation: {{emplyees.designation | titlecase}}
+                            </li>
+                            <li class="list-group-item">
+                                Age: {{emplyees.age | number : '2.2'}}
+                            </li>
+                            <li class="list-group-item">
+                                Salary: {{emplyees.salary | currency : 'INR'}}
+                            </li>
+                            <li class="list-group-item">
+                                <!-- Doj: {{emplyees.doj | date : 'dd/MMM/yyyy'}} -->
+                                <!-- Doj: {{emplyees.doj | date : 'dd-MMM-yyyy'}} -->
+                                Doj: {{emplyees.doj | date : 'dd/MMM/yy'}}
+                            </li>
+                            <li class="list-group-item">
+                              <pre>JSON: {{emplyees | json}}</pre>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

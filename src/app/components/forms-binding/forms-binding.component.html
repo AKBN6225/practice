@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px; margin-bottom: 20px;">
+    <a href="" class="navbar-brand" style="margin-left: 40%;">Angular With Forms Binding</a>
+</nav>
+
+<section style="margin-bottom: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="color: rgb(96, 92, 92)">Manual Binding From Ts to Html</h1>
+                <h3 class="bg-secondary" style="width: 50%;color: aliceblue;">Enter User Name</h3>
+                <input type="text" class="form-control" [value]="userName" style="width: 50%;">
+                <h3>{{userName}}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<div class="section" style="margin-bottom: 100px">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>2 way Binding with Java Script</h1>
+                <input type="text" class="form-control" [value]="javaScript2wayBinding" (input)="update($event)">
+                <h3>{{javaScript2wayBinding}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<section class="mt-3" style="margin-bottom: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h3>2 Way Binding with Angular</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <h4>Enter User Name</h4>
+                            <!-- name is mandatory for angular auto binding -->
+                            <input type="text" class="form-control" name="text"
+                             [(ngModel)] = "angularAutoBinding">
+                        </form>
+                        <h3>{{angularAutoBinding}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

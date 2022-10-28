@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px; margin-bottom: 20px;">
+    <a href="" class="navbar-brand" style="margin-left: 42%;">Angular Structural Directive</a>
+</nav>
+
+<section class="mt-3" style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <p class="h3">Welcome To the Application</p>
+                    </div>
+                    <div class="card-body">
+                        <h3 *ngIf="login">Please click and login</h3>
+                        <h3 *ngIf="candidate">Welcome Arun Kumar</h3>
+                        <h3 *ngIf="logout">Thank You</h3>
+                        <button class="btn btn-success" *ngIf="loginButton" (click)="loggedIn()">Login</button> 
+                        <button class="btn btn-danger"  *ngIf="logoutButton"   (click)="loggedOut()" style="margin-left: 20px;">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px;">
+    <a href="" class="navbar-brand" style="margin-left: 40%;">Angular With Htpp Server Connection</a>
+</nav>
+
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-danger">User List</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusantium provident asperiores tempore. Quasi cupiditate officiis magni tempora nisi, asperiores dolores, enim, porro illum placeat deserunt. Adipisci neque quisquam tenetur culpa, error delectus accusantium pariatur eveniet perferendis soluta excepturi dignissimos.</p>
+                <button class="btn btn-secondary" (click)="getUsers()">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-3" style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover text-center table-striped shadow-lg">
+                    <thead class="bg-danger text-white">
+                        <tr>
+                            <th>Sno</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Website</th>
+                            <th>City</th>
+                            <th>Pin Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let x of users">
+                            <td>{{x.id}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.email}}</td>
+                            <td>{{x.website}}</td>
+                            <td>{{x.address.city}}</td>
+                            <td>{{x.address.zipcode}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

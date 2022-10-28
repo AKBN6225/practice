@@ -1,0 +1,30 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px; margin-bottom: 20px;">
+    <a href="" class="navbar-brand" style="margin-left: 35%;">Angular With Forms Binding Show Password</a>
+</nav>
+
+<section class="mt-3" style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-header" [class.bg-secondary] = "darkTheme" [class.text-white]="darkTheme">
+                        <p class="h4">Theme Selector</p>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" id="flexSwitchCheckDefault"
+                             name="darkTheme" [(ngModel)] = "darkTheme">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Dark Theme</label>
+                        </div>
+                    </div>
+                    <div class="card-body" [class.bg-secondary] = "darkTheme" [class.text-white]="darkTheme">
+                        <img src="../../../assets/images/1.jpg" alt="" class="img-fluid">
+                        <p class="h3 mt-3">My Office</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, maiores fugiat nobis
+                            similique adipisci sunt repellendus autem rem magni, aperiam praesentium quos minima
+                            perferendis error quas maxime distinctio quia corporis modi necessitatibus ea accusamus
+                            repudiandae? Vitae, unde. Quam, asperiores explicabo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

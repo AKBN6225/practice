@@ -1,0 +1,26 @@
+<div class="card sticky-top shadow-lg" *ngIf="isNotEmpty()">
+    <img [src]="selectedContact.picture.large" alt="">
+    <div class="card">
+        <ul class="list-group">
+            <li class="list-group-item">
+                Name: {{selectedContact.name.first}}
+            </li>
+
+            <li class="list-group-item">
+               {{selectedContact.email}}
+            </li>
+
+            <li class="list-group-item">
+                Age: {{selectedContact.dob.age}}
+            </li>
+
+            <li class="list-group-item">
+                City: {{selectedContact.location.city}}
+            </li>
+
+            <li class="list-group-item">
+                State: {{selectedContact.location.state}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px; margin-bottom: 20px;">
+    <a href="" class="navbar-brand" style="margin-left: 35%;">Angular with Events Binding Shoiping Cart</a>
+</nav>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-danger">Shoping Cart</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit enim totam officia soluta, illo, dolorem placeat quibusdam voluptate quos expedita adipisci explicabo veniam ipsam esse dolore incidunt delectus aperiam consequuntur excepturi quas! Quo velit est veniam et fuga debitis possimus!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover text-center table-striped">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <td>slNo</td>
+                            <td>Name</td>
+                            <td>Image</td>
+                            <td>Quantity</td>
+                            <td>Price</td>
+                            <td>Toatl Price</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let x of products">
+                            <td>{{x.slNo}}</td>
+                            <td>{{x.name}}</td>
+                            <td>
+                                <img [src]="x.image" alt="" style="height: 50px; width: 50px">
+                            </td>
+                            <td>
+                                <i class="bi bi-file-minus" (click)="removeQuantity(x.slNo)"></i>
+                                {{x.quantity}}
+                                <i class="bi bi-file-plus" (click)="addQuantity(x.slNo)"></i>
+                            </td>
+                            <td>{{x.price}}</td>
+                            <td>{{x.quantity * x.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

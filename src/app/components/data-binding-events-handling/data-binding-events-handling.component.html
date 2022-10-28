@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-danger" style="margin-top: 200px;">
+    <a href="" class="navbar-brand" style="margin-left: 35%;">Angular with Data Binding and Events Handling</a>
+</nav>
+
+<section style="margin-bottom: 200px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h3>Wish Message</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3>Hello {{message}}</h3>
+                        <button (click)="updateMessage('Good Morning')" class="btn btn-info" style="margin-right: 10px">Good Morning</button>
+                        <button (click)="updateMessage('Good Afternoon')" class="btn btn-primary" style="margin-right: 10px">Good Afternoon</button>
+                        <button (click)="updateMessage('Good Evening')" class="btn btn-success" style="margin-right: 10px">Good Evening</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

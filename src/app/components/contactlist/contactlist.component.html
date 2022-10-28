@@ -1,0 +1,29 @@
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped table-hover text-center">
+                    <thead class="bg-secondary text-white">
+                        <tr>
+                            <th>SlNo</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let x of obtainedData" (click) = "onSelect(x)">
+                            <td>{{x.login.uuid.substr(x.login.uuid.length-5)}}</td>
+                            <td>{{x.name.first}}</td>
+                            <td>{{x.email}}</td>
+                            <td>{{x.phone}}</td>
+                            <td>{{x.location.city}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
