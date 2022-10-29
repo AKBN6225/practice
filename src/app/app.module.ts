@@ -23,6 +23,11 @@ import { AngularWithServerHTTPConnectionComponent } from './components/angular-w
 import { ContactAppComponent } from './components/contact-app/contact-app.component';
 import { ContactlistComponent } from './components/contactlist/contactlist.component';
 import { ContactCardComponent } from './components/contact-card/contact-card.component';
+import { RoutingHomeComponent } from './components/routing-home/routing-home.component';
+import { RoutingAboutComponent } from './components/routing-about/routing-about.component';
+import { RoutingNavBarComponent } from './components/routing-nav-bar/routing-nav-bar.component';
+import { RoutingCountryListComponent } from './components/routing-country-list/routing-country-list.component';
+import { RoutingCountryDetailsComponent } from './components/routing-country-details/routing-country-details.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { ContactCardComponent } from './components/contact-card/contact-card.com
     AngularWithServerHTTPConnectionComponent,
     ContactAppComponent,
     ContactlistComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    RoutingHomeComponent,
+    RoutingAboutComponent,
+    RoutingNavBarComponent,
+    RoutingCountryListComponent,
+    RoutingCountryDetailsComponent
   ],
   imports: [
     BrowserModule,
