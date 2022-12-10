@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color:red">Part 3</h1>
+    <h3>Write a javaScript program to find the number of even digits in a an array of integers</h3>
+    <h3>Write a javaScript program to find the number of even numbers upto given value</h3>
+    <h3>Write a javaScript program to check weather given array of integers is sorted in ascending order</h3>
+    <h3>Write a javaScript program to get the largest even number from an array of integers</h3>
+</body>
+<script>
+    let givenArray = [1, 2, 3, 4, 55, 66, 33.5];
+    let evenCount = 0;
+    let oddCount = 0;
+
+    givenArray.forEach((x) => {
+        if (x % 2 === 0) {
+            evenCount++;
+        } else {
+            oddCount++;
+        }
+    })
+
+    console.log(evenCount);
+    console.log(oddCount);
+
+    //  shortcut method
+
+    let newArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    const evenNumbers = (newArray).filter((x) => {
+        return x % 2 === 0;
+    })
+
+    console.log(evenNumbers.length);
+</script>
+<script>
+    let givenNumber = 88;
+    let evenCountNumbers = 0;
+    let oddCountNumbers = 0;
+
+    for (let i = 0; i <= givenNumber - 1; i++) {
+        if (i % 2 === 0) {
+            evenCountNumbers++
+        } else {
+            oddCountNumbers++
+        }
+    }
+
+    console.log(evenCountNumbers);
+    console.log(oddCountNumbers);    
+</script>
+
+<script>
+    let givenArrayNew = [44, 1, 5, 66, 98, 22, 45, 99];
+
+    let sortedArray = givenArrayNew.sort((a, b) => {
+        return a - b;
+    });
+    console.log(sortedArray);
+
+    isAscending = (a) => {
+        for (let i = 0; i <= a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    console.log(isAscending(givenArrayNew));
+</script>
+
+<script>
+    let largestEvenIntegers = [1, 44, 55, 88, 99, 400, 401];
+    let evenIntegers = [];
+    let oddIntegers = [];
+
+    largestEvenIntegers.forEach((x) => {
+        if (x % 2 === 0) {
+            evenIntegers.push(x);
+        }
+    })
+
+    console.log(evenIntegers.pop());
+
+</script>
+
+<script>
+    let givenString = "Arun786";
+
+    replaceFirstDigit = (abc) => {
+        return abc.replace(/[0-9]/, '$');
+
+        //    return abc.replace(/[0-9]/g, '$');   // replaces all dogits
+        // return abc.replace(/\d/, '$');          // learn masking
+
+    }
+
+    console.log(replaceFirstDigit(givenString));
+</script>
+
+</html>

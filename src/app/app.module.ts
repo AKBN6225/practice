@@ -28,6 +28,14 @@ import { RoutingAboutComponent } from './components/routing-about/routing-about.
 import { RoutingNavBarComponent } from './components/routing-nav-bar/routing-nav-bar.component';
 import { RoutingCountryListComponent } from './components/routing-country-list/routing-country-list.component';
 import { RoutingCountryDetailsComponent } from './components/routing-country-details/routing-country-details.component';
+import { JsonArrayPracticeComponent } from './components/json-array-practice/json-array-practice.component';
+import { HeaderComponent } from './zeroToHero/header/header.component';
+import { SideNavBarComponent } from './zeroToHero/side-nav-bar/side-nav-bar.component';
+import { MainBodyComponent } from './zeroToHero/main-body/main-body.component';
+import { FooterComponent } from './zeroToHero/footer/footer.component';
+import { NewAppComponentComponent } from './zeroToHero/new-app-component/new-app-component.component';
+import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
+import { ForkJoinComponent } from './fork-join/fork-join.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +62,15 @@ import { RoutingCountryDetailsComponent } from './components/routing-country-det
     RoutingAboutComponent,
     RoutingNavBarComponent,
     RoutingCountryListComponent,
-    RoutingCountryDetailsComponent
+    RoutingCountryDetailsComponent,
+    JsonArrayPracticeComponent,
+    HeaderComponent,
+    SideNavBarComponent,
+    MainBodyComponent,
+    FooterComponent,
+    NewAppComponentComponent,
+    TemplateReferenceVariableComponent,
+    ForkJoinComponent
   ],
   imports: [
     BrowserModule,

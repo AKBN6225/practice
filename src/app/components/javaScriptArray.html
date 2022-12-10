@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;color: red;">Java Script Array Methods</h1>
+    </div>
+</body>
+<!-- <script>
+    let cars = [
+        {
+            color: "purple",
+            type: "minivan",
+            registration: new Date("2017-01-03"),
+            capacity: 7
+        },
+        {
+            color: "red",
+            type: "station wagon",
+            registration: new Date("2018-03-03"),
+            capacity: 5
+        }
+    ]
+
+    console.log(cars);
+
+    let car1 = [
+        {
+            color: "white",
+            type: "zoom",
+            registration: new Date("2015-01-03"),
+            capacity: 4
+        },
+        {
+            color: "yellow",
+            type: "wagon",
+            registration: new Date("2019-03-03"),
+            capacity: 4
+        }
+    ]
+
+    console.log(car1);
+
+    cars.unshift(car1[0]);
+    console.log(cars);
+
+    cars.push(car1[1]);
+    console.log(cars);
+</script> -->
+
+<script>
+    let employees = [
+        {firstName: "John", lastName: "mavrick", age: 27, salary: 50000, position: "Manager"},
+        {firstName: "waytson", lastName: "lool", age: 25, salary: 40000, position: "Sales"},
+        {firstName: "Mark", lastName: "bhoo", age: 29, salary: 60000, position: "Developer"},
+        {firstName: "Mary", lastName: "Doe", age: 36, salary: 55000, position: "Developer"},
+        {firstName: "arun", lastName: "Smith", age: 38, salary: 50000, position: "Manager"},
+        {firstName: "Jane", lastName: "venu", age: 26, salary: 40000, position: "Sales"},
+        {firstName: "shiva", lastName: "sunny", age: 30, salary: 60000, position: "Developer"},
+        {firstName: "bharath", lastName: "arun", age: 27, salary: 55000, position: "Developer"}
+    ]
+
+    console.log(employees);
+
+    // What is the avg income of all employees?
+
+    let totalIncome = 0;
+
+    // for (let i = 0; i <= employees.length-1; i++){
+    //     totalIncome += employees[i].salary/employees.length;
+    // }
+
+    // console.log(totalIncome);
+    // console.log(employees.length);
+
+    employees.forEach((x) => {
+        // console.log(x.salary);
+        totalIncome += x.salary
+    })
+
+    console.log(totalIncome/employees.length);
+
+    // who are the people that currently older than 30
+
+    employees.forEach((x) => {
+        if(x.age > 30){
+            console.log(x);
+        }
+    })
+
+    // who are the people that currently older than 30 with filter method   
+
+    let olderThan30 = employees.filter((x) => {
+        return x.age > 30;
+    });
+
+    console.log(olderThan30);
+
+    // get list of full names of employees
+
+    employees.forEach((x) =>{
+        fullName = x.firstName + " " +x.lastName;
+        console.log(fullName);
+    })
+
+    // get list of full names of employees with map method
+    let fullNames = employees.map((x) => {
+        return x.firstName + " " + x.lastName;
+    })
+
+    // get list of full names of employees with concat method
+    let fullNames1 = employees.map((x) => {
+        return x.firstName.concat(" ", x.lastName);
+    })
+
+    // get a list of people in array orderd from youngest to oldest using sort method
+
+    let sortedEmployees = employees.sort((a, b) => {
+        return (a.age - b.age); 
+    })
+
+    console.log(sortedEmployees);
+
+    // How many people are there in each positions
+
+    let managerCount = 0;
+    let salesCount = 0;
+    let developerCount = 0;
+    let Managers = employees.filter((x) => {
+        // return x.position === "Manager";
+        if(x.position === "Manager"){
+            managerCount++
+        }
+
+        if(x.position === "Sales"){
+            salesCount++
+        }
+
+        if(x.position === "Developer"){
+            developerCount++
+        }
+    })
+
+    // console.log(Managers);
+    console.log(managerCount);
+    console.log(salesCount);
+    console.log(developerCount);
+
+</script>
+
+</html>

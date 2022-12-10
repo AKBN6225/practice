@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: red">Part 2</h1>
+    <h3>Write a javaScript program to create a new string from a given string from first 3 characters and last 3 characters by adding together.The string length must be 3 or more , if not, the original string is returned</h3>
+    <h3>Write a javaScript program to extract the first half of a string of even length,if not even return complete string</h3>
+    <H3>Write a javaScript progrsm to concat two strings except their first character</H3>
+    <h3>Given two values, write a javaScript program to find out which one nearest to 100</h3>
+    <h3>Write a javaScript to check a given string contains 2 or 4 occurences of a specified character</h3>
+</body>
+<script>
+    let word = "Arun kumar";
+    let newWord = "";
+
+    function checking(word){
+        if(word.length > 3){
+            newWord = word.slice(0,3) + word.slice(-3);
+        }else{
+            newWord = word;
+        }
+    }
+
+    checking(word);
+
+    console.log(newWord);
+
+    // shortcut method
+
+    let name = "bantupalli";
+
+    const newString = (name) => {
+      return  name.length < 3 ? name : name.slice(0,3) + name.slice(-3)
+    }
+
+    console.log(newString(name));
+</script>
+
+<script>
+    let originalString = "B ARUN kumar";
+    let withOutSpaces = originalString.split(" ").join("");
+    
+    console.log(withOutSpaces);
+    console.log(withOutSpaces.length);
+
+    const halfString = (withOutSpaces) => {
+      return  (withOutSpaces.length)%2 == 0 ? withOutSpaces.slice(0,withOutSpaces.length/2) : originalString;
+    }
+
+    console.log(halfString(withOutSpaces));
+</script>
+
+<SCRipt>
+    let firstName = "bbantupalli";
+    let lastName = "aarun kumar";
+
+    let exceptFirstletterFirstName = firstName.slice(1);
+    console.log(exceptFirstletterFirstName);
+
+    let exceptLastletterLastName = lastName.slice(1);
+    console.log(exceptLastletterLastName);
+
+    finalName = exceptFirstletterFirstName + " " + exceptLastletterLastName;
+    console.log(finalName);
+
+    // shortcut method
+
+    let first = "arun";
+    let last = "kumar";
+
+    concat = (a,b) => {
+        return a.slice(1) + b.slice(1)
+    }
+
+    console.log(concat(first,last));
+</SCRipt>
+
+<script>
+    let a = 45;
+    let b = 55;
+    const ref = 100;
+
+    nearestTo100 = (a,b,ref) => {
+        return (ref-a) > (ref-b) ? b : a;
+    }
+    
+    console.log(nearestTo100(a,b,ref));
+</script>
+<script>
+    let givenString = "Apple";
+
+    // checking for "p" exists twice or 4times in the givenString
+
+    let splitGivenString = givenString.split("");
+    let count = 0;
+    let filterP = splitGivenString.filter((x) => {
+        return x === "p";
+    })
+
+    console.log(filterP.length);
+</script>
+</html>

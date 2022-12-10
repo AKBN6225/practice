@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: red">Part 1</h1>
+    <h3>1) Write a javaScriprt program to check two numbers and return true if one of the number is 100 or if the sum of two numbers is 100</h3>
+    <h3>2) Write a javaScriprt to get the extension of a file</h3>  
+    <h3>Write a javaScriprt program to replace every character in a given string with the character following it in the alphabet</h3>
+    <h3>Write a javaScriprt program to get current data in formats</h3>
+    <h3>Write a javaScriprt program to create a new string adding "New!" adding in front of given string.If the given string begins with "New!" already return the original string</h3>
+    
+</body>
+<script>
+    let a = 45;
+    let b = 55;
+
+ function check(a,b){
+        if ((a + b) === 100 || a === 100 || b === 10) {
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+    }
+ 
+    check(a,b)
+
+</script>
+
+<script>
+    let file = "practice.js";
+    extension = file.split(".").pop();
+    console.log(extension);
+</script>
+
+<script>
+    let name = "arun";
+    splittingNameArray = name.split("");
+    console.log(splittingNameArray);
+    let newString = "";
+    for (let i = 0; i <= splittingNameArray.length-1; i++) {
+        newString += String.fromCharCode(splittingNameArray[i].charCodeAt(0) + 1);
+    }
+    console.log(newString);
+</script>
+
+<script>
+    let date = new Date();
+    console.log(date);
+</script>
+
+<script>
+    let word = "Arun kumar";
+    let splitWordsArray = word.split("");
+    console.log(splitWordsArray);
+    console.log(splitWordsArray.length);
+    // console.log(splitWords.join(""));
+
+    let first4letters = "";
+
+    for(let i = 0; i <= 3; i++){
+        // first4letters.push(splitWordsArray[i]);
+        first4letters += splitWordsArray[i];
+    }
+    console.log(first4letters);
+
+    if(first4letters != "New!"){
+        finalAddedString = "New!" +" "+  word;
+        console.log(finalAddedString);
+    }else{
+        finalString = word;
+        console.log(finalString);
+    }
+</script>
+
+</html>

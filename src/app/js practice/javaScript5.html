@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>wirte a javaScript that returns a passed string with letters in alphabetical order.</h3>
+    <h3>write a javaScript function that accepts a string as a parameter and counts the number of vowels in the string</h3>
+    <h3>write a javaScript program to extract unique characters from a string</h3>
+    <h3>write a javaScript program to find first not repeated character</h3>
+</body>
+<script>
+    let givenString = "Arun";
+    let splitString = givenString.split("");
+    console.log(splitString);
+
+    splitString.sort((a, b) => {
+        return a > b ? 1 : -1;
+    })
+
+    console.log(splitString);
+</script>
+
+<script>
+    let givenStringForVowels = "Arun Eshika Aswath";
+    let vowelCount = 0;
+
+    NumberOfVowels = (givenStringForVowels).split("").filter((x) => {
+        if (x == "a" || x == "e" || x == "i" || x == "o" || x == "u" ||
+            x == "A" || x == "E" || x == "I" || x == "O" || x == "U") {
+            vowelCount++
+        }
+    });
+
+    console.log(vowelCount);
+
+</script>
+
+<script>
+    let uniqueCharSting = "bantupalli arun kumar";
+    let splitChar = uniqueCharSting.split("");
+    console.log(splitChar);
+
+    filterd = [];
+
+    // splitChar.forEach((x) => {
+    //     filterd.forEach((y) => {
+    //         if(x != y){
+    //             filterd.push(x)
+    //         }
+    //     })
+    // })
+
+    splitChar.forEach((x) => {
+        if(filterd.indexOf(x) == -1){
+            filterd.push(x)
+        }
+    })
+
+    console.log(filterd.join(""));
+
+
+</script>
+
+<script>
+    let notRepeatedCharString = "abacddbeyc";
+    let splitArray = notRepeatedCharString.split("");
+
+    let unique = [];
+    let duplicates = [];
+
+    splitArray.forEach((x) => {
+        if(unique.indexOf(x) == -1){
+            unique.push(x);
+        }else{
+            duplicates.push(x);
+        }
+    })
+
+    console.log(unique);
+    console.log(duplicates);
+
+</script>
+
+</html>
