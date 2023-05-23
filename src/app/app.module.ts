@@ -36,6 +36,7 @@ import { FooterComponent } from './zeroToHero/footer/footer.component';
 import { NewAppComponentComponent } from './zeroToHero/new-app-component/new-app-component.component';
 import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
 import { ForkJoinComponent } from './fork-join/fork-join.component';
+import { NodejsPracticeComponent } from './nodejs-practice/nodejs-practice.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ForkJoinComponent } from './fork-join/fork-join.component';
     FooterComponent,
     NewAppComponentComponent,
     TemplateReferenceVariableComponent,
-    ForkJoinComponent
+    ForkJoinComponent,
+    NodejsPracticeComponent
   ],
   imports: [
     BrowserModule,
